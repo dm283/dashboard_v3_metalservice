@@ -10,6 +10,7 @@ import Navbar from './components/Navbar.vue';
 import Dashboard from './components/Dashboard.vue';
 import BarChart from '@/components/BarChart.vue';
 import BarHorizont from '@/components/BarHorizont.vue';
+import logo from '@/assets/alta-logo-full.jpg';
 
 
 // import from config.ini file in backend folder
@@ -258,7 +259,7 @@ const changeTabValue = (n) => {
     
   <div class="mt-40 mx-auto bg-gray-50 border rounded-lg overflow-hidden">
     <div class="py-2 px-5 bg-blue-400 text-center text-white text-lg">
-      Дашборд | Витрина Свободного склада (СС)
+      Dashboard | Витрина Свободного склада (СС)
     </div>
     <form @submit.prevent="authSubmit" enctype="multipart/form-data" class="mx-5 mt-2 ">
       <div class="my-2">
@@ -421,13 +422,11 @@ const changeTabValue = (n) => {
   <!-- Show loading spinner while loading is true -->
   <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
     <PulseLoader />
-     LOADING DATA...
+     ЗАГРУЗКА ДАННЫХ...
   </div>
 
   <!-- Show when loading is done -->
-  <div v-else class="bg-gray-50 ">
-
-
+  <div v-else class="bg-gray-50">
   <Dashboard 
     @change-tab="changeTabValue"
     :tabNumberVar = "tabNumberVar"
@@ -452,6 +451,13 @@ const changeTabValue = (n) => {
     :goodsMovementListAccountBook="state.goodsMovement.listGoodsMovement" 
     :goodsMovementListTableColumns="goodsMovementListTableColumns"
   /> 
+
+  <footer>
+    <div class="bg-slate-200 flex box-content border border-slate-200 h-7 pl-5 pr-10 text-left text-slate-500 text-sm font-semibold">
+      <div class="flex-1"><img class="h-7" :src="logo"></div>
+      <div class="py-1">&#169; "Альта-Софт" Лиц.: 00008</div>
+    </div>
+  </footer>
 
   </div>
 </div>

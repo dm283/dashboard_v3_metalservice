@@ -730,7 +730,7 @@ const exportFile = (dataSet, fileName, fileType) => {
 
 <style lang="postcss" scope>
 .listArea {
-  height: 620px;
+  height: 600px;
 }
 
 .paginationBtn {
