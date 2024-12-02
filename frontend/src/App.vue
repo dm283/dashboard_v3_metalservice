@@ -10,7 +10,7 @@ import Navbar from './components/Navbar.vue';
 import Dashboard from './components/Dashboard.vue';
 import BarChart from '@/components/BarChart.vue';
 import BarHorizont from '@/components/BarHorizont.vue';
-import logo from '@/assets/alta-logo-full.jpg';
+import logo from '@/assets/alta_logo_full.jpg';
 
 
 // import from config.ini file in backend folder
