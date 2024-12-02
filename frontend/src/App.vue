@@ -21,8 +21,6 @@ parser.parse(data);
 var backendIpAddress = parser.get("main", "backend_ip_address");
 var backendPort = parser.get("main", "backend_port");
 var companyName = parser.get("content", "company_name");
-// console.log('backendIpAddress =', backendIpAddress)
-// console.log('backendPort =', backendPort)
 
 
 const state = reactive({
